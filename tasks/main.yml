@@ -1,2 +1,16 @@
 ---
-# tasks file for ansible-role-fah
+- name: Downloading fah-client for x64
+  include_tasks: download_fah_x64.yml
+  when: ansible_architecture == "x86_64"
+
+- name: Installing fah-client for x64
+  include_tasks: install_fah_x64.yml
+  when: ansible_architecture == "x86_64"
+
+- name: Configure fah-client for x64
+  include_tasks: configure_fah_x64.yml
+  when: ansible_architecture == "x86_64"
+
+- name: Start fah-client for x64
+  include_tasks: start_fah_x64.yml
+  when: ansible_architecture == "x86_64"
