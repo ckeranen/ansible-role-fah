@@ -1,0 +1,3 @@
+<config>
+  <account-token v="{{ fah_client_account_token }}"/>
+</config>
