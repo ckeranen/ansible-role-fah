@@ -1,0 +1,5 @@
+---
+
+- name: Install fah-client
+  apt:
+    deb: /usr/local/bin/fah-client.deb 

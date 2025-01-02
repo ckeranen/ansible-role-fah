@@ -1,0 +1,9 @@
+---
+
+- name: Configure fah-client
+  template:
+    src: config.xml.j2
+    dest: /etc/fah-client/config.xml
+    owner: fah-client
+    group: fah-client
+    mode: '0644'

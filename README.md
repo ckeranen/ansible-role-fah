@@ -26,4 +26,4 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: fah-clients
       roles:
-         - { role: ansible-role-fah }
+         - role: ansible-role-fah

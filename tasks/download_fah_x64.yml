@@ -1,0 +1,6 @@
+---
+
+- name: Download fah-client
+  get_url:
+    url: https://download.foldingathome.org/releases/{{ fah_client_version }}/fah-client/debian-10-64bit/release/latest.deb
+    dest: /usr/local/bin/fah-client.deb

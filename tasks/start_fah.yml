@@ -1,0 +1,7 @@
+---
+
+- name: Start fah-client
+  service:
+    name: fah-client
+    state: restarted
+    enabled: yes

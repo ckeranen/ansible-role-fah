@@ -1,3 +1,5 @@
 ---
-fah_client_account_token: ADD YOUR ACCOUNT TOKEN HERE #Create a token at https://v8-3.foldingathome.org/account
-fah_client_version: public #alpha, beta or public
+#Create a token at https://v8-3.foldingathome.org/account
+fah_client_account_token: ADD YOUR ACCOUNT TOKEN HERE
+#Select alpha, beta or public
+fah_client_version: public
