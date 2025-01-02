@@ -24,6 +24,9 @@ Example Playbook
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-    - hosts: fah-clients
-      roles:
-         - role: ansible-role-fah
+- hosts: fah-client
+  gather_facts: true
+  become: true
+  remote_user: CHANGEME
+  roles:
+     - role: ansible-role-fah
