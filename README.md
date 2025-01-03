@@ -7,7 +7,7 @@ Requirements
 ------------
 
 A linux box running debian like OS.
-Debian, Ubuntu or other flavors
+Debian, Ubuntu or other flavors. Even Raspberry Pi 
 
 Role Variables
 --------------
