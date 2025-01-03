@@ -1,9 +1,13 @@
 ---
 - name: Downloading fah-client for x64
   include_tasks: download_fah_x64.yml
-  #when: ansible_architecture == "x86_64"
+  when: ansible_architecture == "x86_64"
 
-- name: Install fah-client for x64
+- name: Downloading fah-client for aarch64
+  include_tasks: download_fah_aarch64.yml
+  when: ansible_architecture == "aarch64"
+
+- name: Install fah-client
   include_tasks: install_fah.yml
 
 - name: Configure fah-client
