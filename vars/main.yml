@@ -1,5 +1,9 @@
 ---
-#Create a token at https://v8-3.foldingathome.org/account
+#Create a token at https://v8-4.foldingathome.org/account
 fah_client_account_token: ADD YOUR ACCOUNT TOKEN HERE
 #Select alpha, beta or public
 fah_client_version: public
+#Type in username. Use anonymous to not use any username
+fah_client_user_id: anonymous
+#Type in teamid to use any team. To not use Team. Select 0
+fah_client_team_id: 0
