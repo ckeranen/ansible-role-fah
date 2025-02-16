@@ -1,0 +1,32 @@
+name: ansible-role-fah package
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Create ZIP package
+        run: |
+          BRANCH=${GITHUB_REF#refs/heads/}
+          COMMIT=$(echo $GITHUB_SHA | cut -c1-7)
+          ZIP_FILENAME="ansible-role-fah-${BRANCH}-${COMMIT}.zip"
+          
+          sudo apt-get update && sudo apt-get install -y zip
+
+          zip -r "${ZIP_FILENAME}" . -x "*.git*"
+          
+          echo "ZIP_FILENAME=${ZIP_FILENAME}" >> $GITHUB_ENV
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: package
+          path: ${{ env.ZIP_FILENAME }}
